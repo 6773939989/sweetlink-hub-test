@@ -1,4 +1,4 @@
-# Archivio degli add-on Sweetplace AMBIENTE MAIN_DEV
+# Archivio degli add-on Sweetplace
 
 Questo repository è l'archivio da cui gli hub Sweetplace scaricano il proprio add-on. Contiene
 soltanto il manifesto: il programma viaggia come immagine già costruita, e l'immagine non è
@@ -24,4 +24,4 @@ support@sweetplace.me
 Il contenuto di questo repository è generato automaticamente: le modifiche fatte qui vengono
 sovrascritte alla pubblicazione successiva.
 
-© 2026 M2R S.r.l. Tutti i diritti riservati.
+© 2026 Sweetplace Srl SB. Tutti i diritti riservati.

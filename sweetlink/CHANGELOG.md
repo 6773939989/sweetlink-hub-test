@@ -1,0 +1,146 @@
+# Novità
+
+Questo è il testo che Home Assistant mostra quando propone un aggiornamento. Una voce per versione,
+la più recente in cima, scritta per chi ha l'impianto in casa e non per chi lo sviluppa.
+
+## 0.1.52
+
+- Quando l'assistenza aggiorna da remoto il programma che governa la casa, l'app considera il
+  programma nuovo partito bene quando il programma stesso dice di aver finito di avviarsi. Prima
+  aspettava anche che uno dei suoi automatismi fosse già scattato: in una casa con pochi automatismi
+  poteva non succedere affatto, e l'app rimetteva il programma di prima anche se quello nuovo
+  funzionava.
+- Se in quel momento l'impianto sta facendo o ripristinando una copia di sicurezza, o il suo sistema
+  sta ripartendo, l'app aspetta che abbia finito prima di riaccendere il programma della casa, di
+  aggiornare NetDaemon e MariaDB o di rimettere MariaDB com'era, e lo dice all'assistenza. Prima, in
+  quel caso, il programma della casa poteva restare spento.
+- Se MariaDB è acceso ma non ha ancora detto a Home Assistant di essere pronto, l'app non aggiorna il
+  programma della casa e spiega all'assistenza cosa fare: riavviare MariaDB e riprovare.
+
+## 0.1.51
+
+- L'app è pronta per la versione di Home Assistant in uso negli impianti.
+- Dopo l'aggiornamento di Home Assistant l'accesso da fuori casa torna a funzionare.
+
+## 0.1.50
+
+- Prima di installare da remoto una nuova versione del programma che governa la casa, l'app
+  controlla che NetDaemon e MariaDB, i due componenti su cui il programma si appoggia, siano
+  abbastanza recenti. Se non lo sono non installa niente, a meno che l'assistenza chieda di
+  aggiornarli prima.
+- Quando li aggiorna, spegne il programma della casa una volta sola: aggiorna prima MariaDB, poi
+  NetDaemon, e lo riaccende solo quando MariaDB ha davvero finito di sistemare i suoi dati. Prima di
+  aggiornare MariaDB l'app ne fa una copia di sicurezza, che resta fra le copie di sicurezza
+  dell'impianto con un nome che comincia per «Sweetlink»; se l'aggiornamento di MariaDB non riesce,
+  l'app rimette da sola la copia e il programma di prima, e se neanche questo riesce il programma della
+  casa resta spento e l'assistenza lo sa. Di NetDaemon la copia la fa Home Assistant.
+- Durante l'aggiornamento l'app dice all'assistenza a che punto è e da quanto tempo la casa è senza
+  programma, e l'assistenza può interromperlo: l'app rimette le cose com'erano dove si può.
+- Mentre il programma della casa si aggiorna, l'app non accetta aggiornamenti di se stessa né di
+  Home Assistant; e non aggiorna il programma mentre Home Assistant o un'altra app si stanno
+  aggiornando, anche se l'aggiornamento l'ha chiesto qualcuno dall'impianto. Aspetta anche che Home
+  Assistant finisca le sue copie di sicurezza: prima di aggiornare qualcosa Home Assistant ne fa una, e
+  se la manda a un servizio di backup esterno ci possono volere minuti, in cui il Supervisor non mostra
+  ancora niente. Per saperlo l'app chiede a Home Assistant di avvisarla; se Home Assistant non lo
+  permette, l'app lo scrive nel suo registro e guarda solo il Supervisor, e quei minuti restano
+  scoperti.
+- L'app dice all'assistenza quali versioni di NetDaemon e MariaDB sono installate e quali sono le
+  ultime disponibili.
+
+## 0.1.49
+
+- Quando un aggiornamento chiesto dall'assistenza non va a buon fine, o l'app incontra un problema,
+  l'app manda da sola all'assistenza il pezzo del suo registro che serve a capire cosa è successo:
+  non serve più copiarlo a mano. Prima di mandarlo toglie chiavi e password, nelle forme che
+  conosce.
+- Quando serve, l'assistenza può leggere dalla sua console il registro dell'app e quello del
+  programma che governa la casa; quello che legge così non viene conservato.
+
+## 0.1.48
+
+- Quando l'assistenza aggiorna da remoto il programma che governa la casa, mentre aspetta che il
+  programma nuovo si avvii l'app manda all'assistenza, passo per passo, cosa vede. Se capisce subito
+  che non sta girando il programma giusto, rimette quello di prima senza aspettare dieci minuti,
+  e manda il perché.
+
+## 0.1.47
+
+- Quando l'assistenza aggiorna da remoto Home Assistant, l'app o il programma che governa la casa,
+  l'app le dice a che punto è l'aggiornamento mentre succede, con la percentuale dello scaricamento
+  quando Home Assistant la dà. Quando Home Assistant riparte lo dice subito, e poi controlla ancora
+  per qualche minuto che resti acceso prima di dare l'aggiornamento per concluso.
+- L'app ora chiede il programma che governa la casa nello stesso modo in cui si collega già
+  all'assistenza. Dovrebbe sparire il rifiuto che sull'impianto di prova fermava l'invio da remoto.
+
+## 0.1.46
+
+- L'assistenza può aggiornare da remoto il programma che governa la casa. Prima di installarlo l'app
+  controlla che sia proprio quello mandato; dopo, controlla che funzioni, e se non funziona rimette
+  da sola quello di prima.
+
+## 0.1.45
+
+- Dai prossimi aggiornamenti in poi, quando l'assistenza aggiorna l'app da remoto e l'aggiornamento
+  riesce, la sua console lo mostra come riuscito e non più come rifiutato. Questo aggiornamento, che
+  installa la correzione, può ancora risultare rifiutato anche se è andato bene.
+
+## 0.1.44
+
+- Durante gli aggiornamenti l'app annota meglio nel suo registro cosa sta succedendo, così
+  l'assistenza capisce più in fretta perché un aggiornamento non è partito.
+
+## 0.1.43
+
+- Prima di preparare un nuovo impianto, il controllo finale avvisa se Home Assistant è collegato a un
+  account Home Assistant Cloud, e spiega come scollegarlo.
+- Quando l'accesso dell'assistenza o dell'installatore si richiude, l'app non lascia più messaggi
+  d'errore inutili nel registro di Home Assistant.
+
+## 0.1.42
+
+- Il pulsante del pannello per registrare l'apparecchio porta direttamente alla sua pagina di
+  registrazione, anche su un computer dove si è già aperta un'altra casa.
+
+## 0.1.41
+
+- L'app controlla da sola le impostazioni di Home Assistant che servono all'accesso da fuori casa e
+  alla protezione contro i tentativi di accesso ripetuti. Prima di correggerle mette da parte una copia
+  del file che le contiene, quando il file c'è già, e di solito Home Assistant si riavvia una volta; se
+  qualcosa non va, rimette tutto com'era e avvisa l'assistenza.
+
+## 0.1.40
+
+- Se Home Assistant blocca un indirizzo dopo troppe password sbagliate, la casa lo vede con parole
+  semplici — una notifica e un avviso nel pannello — e l'assistenza potrà sbloccarlo dalla console.
+
+## 0.1.39
+
+- Manutenzione interna: nessuna novità per chi usa l'impianto.
+
+## 0.1.38
+
+- L'assistenza può aggiornare l'app Sweetlink da remoto, con una copia di sicurezza fatta prima.
+
+## 0.1.37
+
+- Il permesso dal pannello vale per i due account di assistenza previsti sull'impianto.
+
+## 0.1.36
+
+- Dal pannello decidi tu quando l'assistenza Sweetplace o l'installatore possono entrare nel tuo
+  impianto. Il permesso si spegne da solo dopo dieci minuti senza attività.
+
+## 0.1.35
+
+Prima versione distribuita.
+
+- Il pannello nella barra laterale mostra lo stato del collegamento con i servizi Sweetplace.
+- Le persone di casa si gestiscono dal portale e compaiono nel pannello dell'apparecchio, con
+  l'intestatario della casa indicato accanto al suo nome.
+- L'indirizzo di casa si cambia dal portale e l'apparecchio lo aggiorna anche in Home Assistant.
+- Se un cambiamento alla configurazione non va a buon fine, l'apparecchio rimette le cose com'erano
+  e avvisa l'assistenza.
+- L'apparecchio comunica all'assistenza quali versioni sta eseguendo, così che gli aggiornamenti
+  arrivino quando servono e non a caso.
+- L'assistenza può aggiornare Home Assistant da remoto, sempre con una copia di sicurezza fatta
+  prima, e riportarlo alla versione precedente se serve.
