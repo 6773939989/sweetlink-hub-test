@@ -3,6 +3,12 @@
 Questo è il testo che Home Assistant mostra quando propone un aggiornamento. Una voce per versione,
 la più recente in cima, scritta per chi ha l'impianto in casa e non per chi lo sviluppa.
 
+## 0.1.53
+
+- Con Google Home collegato, l'app Google Home mostra i dispositivi scelti per i comandi vocali, con
+  i loro nomi e le loro stanze, e li può accendere, spegnere e leggere. Quando un dispositivo cambia
+  stato in casa, l'app Google Home lo vede da sola, senza doverla riaprire.
+
 ## 0.1.52
 
 - Quando l'assistenza aggiorna da remoto il programma che governa la casa, l'app considera il
