@@ -3,6 +3,11 @@
 Questo è il testo che Home Assistant mostra quando propone un aggiornamento. Una voce per versione,
 la più recente in cima, scritta per chi ha l'impianto in casa e non per chi lo sviluppa.
 
+## 0.1.54
+
+- Nessuna novità per chi usa l'impianto: controlli in più prima che una versione nuova venga
+  distribuita.
+
 ## 0.1.53
 
 - Con Google Home collegato, l'app Google Home mostra i dispositivi scelti per i comandi vocali, con
