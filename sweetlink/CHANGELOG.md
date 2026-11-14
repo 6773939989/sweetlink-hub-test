@@ -3,6 +3,16 @@
 Questo è il testo che Home Assistant mostra quando propone un aggiornamento. Una voce per versione,
 la più recente in cima, scritta per chi ha l'impianto in casa e non per chi lo sviluppa.
 
+## 0.1.55
+
+- L'app dice all'assistenza da dove l'impianto riceve i suoi aggiornamenti: dalla versione di
+  produzione di Sweetplace, dalla versione di prova, o da un'altra fonte. Dice anche quanti degli altri
+  programmi installati non arrivano dal catalogo di Sweetplace. Per chi abita la casa non cambia
+  niente.
+- Prima di preparare un nuovo impianto da copiare, il controllo finale mostra da quale versione
+  l'impianto riceve gli aggiornamenti, e l'impianto si prepara solo se è quella di produzione. Per
+  confermare, la parola da scrivere nel pannello diventa PRODUZIONE.
+
 ## 0.1.54
 
 - Nessuna novità per chi usa l'impianto: controlli in più prima che una versione nuova venga
