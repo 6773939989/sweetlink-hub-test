@@ -3,6 +3,14 @@
 Questo è il testo che Home Assistant mostra quando propone un aggiornamento. Una voce per versione,
 la più recente in cima, scritta per chi ha l'impianto in casa e non per chi lo sviluppa.
 
+## 0.1.56
+
+- L'assistenza di Sweetplace può leggere dalla sua console cosa è installato sul tuo impianto: le
+  applicazioni, le integrazioni e ciò che HACS ha scaricato, con le loro versioni, e gli avvisi che
+  Home Assistant mostra fra le riparazioni. La lettura parte solo quando l'assistenza la chiede, e non
+  cambia niente in casa. I nomi che hai dato alle integrazioni non vengono inviati. Il testo di un
+  errore di un'integrazione sì, e può contenere l'indirizzo di un dispositivo della tua rete di casa.
+
 ## 0.1.55
 
 - L'app dice all'assistenza da dove l'impianto riceve i suoi aggiornamenti: dalla versione di
