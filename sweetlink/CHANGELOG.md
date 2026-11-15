@@ -3,6 +3,11 @@
 Questo è il testo che Home Assistant mostra quando propone un aggiornamento. Una voce per versione,
 la più recente in cima, scritta per chi ha l'impianto in casa e non per chi lo sviluppa.
 
+## 0.1.59
+
+- Se l'impianto si spegne nei primi minuti dopo l'avvio, Sweetlink non scrive più nel suo registro una riga
+  sbagliata sul collegamento con l'assistenza.
+
 ## 0.1.58
 
 - Dalla console il team può aggiornare gli altri add-on all'ultima versione del loro autore, uno alla volta,
