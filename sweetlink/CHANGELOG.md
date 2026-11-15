@@ -3,6 +3,12 @@
 Questo è il testo che Home Assistant mostra quando propone un aggiornamento. Una voce per versione,
 la più recente in cima, scritta per chi ha l'impianto in casa e non per chi lo sviluppa.
 
+## 0.1.57
+
+- Nell'elenco delle integrazioni che l'assistenza legge c'è anche l'indirizzo a cui ognuna è collegata,
+  per esempio quello del server Z-Wave. Dell'indirizzo si invia solo l'apparecchio e la porta: password,
+  chiavi, codici d'accesso e il resto dell'indirizzo restano sull'impianto e non vengono inviati.
+
 ## 0.1.56
 
 - L'assistenza di Sweetplace può leggere dalla sua console cosa è installato sul tuo impianto: le
