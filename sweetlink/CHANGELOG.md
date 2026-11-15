@@ -3,6 +3,12 @@
 Questo è il testo che Home Assistant mostra quando propone un aggiornamento. Una voce per versione,
 la più recente in cima, scritta per chi ha l'impianto in casa e non per chi lo sviluppa.
 
+## 0.1.58
+
+- Dalla console il team può aggiornare gli altri add-on all'ultima versione del loro autore, uno alla volta,
+  con una copia di sicurezza prima di ciascuno. Se un add-on non riparte o un'integrazione non torna,
+  l'aggiornamento si ferma lì.
+
 ## 0.1.57
 
 - Nell'elenco delle integrazioni che l'assistenza legge c'è anche l'indirizzo a cui ognuna è collegata,
