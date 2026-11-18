@@ -3,6 +3,11 @@
 Questo è il testo che Home Assistant mostra quando propone un aggiornamento. Una voce per versione,
 la più recente in cima, scritta per chi ha l'impianto in casa e non per chi lo sviluppa.
 
+## 0.1.61
+
+- Corretto il motivo per cui, con la 0.1.60, il passaggio dello Z-Wave alla copia di Sweetplace si fermava quando
+  doveva ricollegare Home Assistant alla copia: lo Z-Wave restava spento finché l'assistenza non premeva «Ripristina».
+
 ## 0.1.60
 
 - L'assistenza di Sweetplace può portare lo Z-Wave del tuo impianto dall'add-on del suo autore alla copia che
