@@ -3,6 +3,19 @@
 Questo è il testo che Home Assistant mostra quando propone un aggiornamento. Una voce per versione,
 la più recente in cima, scritta per chi ha l'impianto in casa e non per chi lo sviluppa.
 
+## 0.1.60
+
+- L'assistenza di Sweetplace può portare lo Z-Wave del tuo impianto dall'add-on del suo autore alla copia che
+  Sweetplace pubblica nel suo archivio, con le stesse chiavi e gli stessi dispositivi. Lo fa dalla sua console, su
+  una casa alla volta, e lo Z-Wave si ferma per qualche minuto. L'add-on dell'autore resta installato e fermo, come
+  copia di sicurezza, e l'assistenza può tornare indietro con «Ripristina». Se la copia non parte, Sweetlink manda
+  all'assistenza le ultime righe del suo registro, al più 200.
+- Per farlo Sweetlink dichiara al sistema un permesso in più (il ruolo «manager» del Supervisor): gli serve per
+  installare, avviare, fermare e togliere un add-on e per fare e togliere una copia di sicurezza. Sweetlink lo usa
+  solo per il passaggio dello Z-Wave e per l'azzeramento di un impianto da copiare.
+- Prima di preparare un nuovo impianto da copiare, Sweetlink ferma da solo la rete di servizio dell'assistenza. Se la
+  vede accesa e non riesce a fermarla, non cancella niente e lo dice.
+
 ## 0.1.59
 
 - Se l'impianto si spegne nei primi minuti dopo l'avvio, Sweetlink non scrive più nel suo registro una riga

@@ -1,0 +1,11 @@
+---
+configuration:
+  import_backup:
+    name: Backup da importare
+    description: >-
+      Il nome di un file .tar nella cartella dei backup. Lo scrive soltanto
+      Sweetlink, durante il passaggio dello Z-Wave al nostro archivio: al
+      primo avvio l'add-on prende chiavi e impostazioni dello Z-Wave da quel
+      backup. Lasciala vuota.
+network:
+  3000/tcp: Z-Wave JS server port
