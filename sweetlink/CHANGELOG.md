@@ -3,6 +3,15 @@
 Questo è il testo che Home Assistant mostra quando propone un aggiornamento. Una voce per versione,
 la più recente in cima, scritta per chi ha l'impianto in casa e non per chi lo sviluppa.
 
+## 0.1.62
+
+- Dopo il passaggio dello Z-Wave alla copia di Sweetplace, la copia riparte da sola a ogni riavvio dell'impianto,
+  anche quando l'add-on del suo autore era impostato per partire a mano.
+- L'add-on dell'autore resta installato e fermo come copia di sicurezza, ma non compare più nel menu laterale di
+  Home Assistant e il sistema non prova più a riavviarlo da solo: acceso accanto alla copia, si contenderebbe con lei
+  la stessa chiavetta Z-Wave. Con «Ripristina» l'assistenza gli rimette tutto com'era.
+- Durante il passaggio e il ripristino, l'assistenza vede da quanti secondi lavora il passo in corso.
+
 ## 0.1.61
 
 - Corretto il motivo per cui, con la 0.1.60, il passaggio dello Z-Wave alla copia di Sweetplace si fermava quando
