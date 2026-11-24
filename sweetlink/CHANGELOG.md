@@ -3,6 +3,16 @@
 Questo è il testo che Home Assistant mostra quando propone un aggiornamento. Una voce per versione,
 la più recente in cima, scritta per chi ha l'impianto in casa e non per chi lo sviluppa.
 
+## 0.1.63
+
+- Prima parte del collegamento con Alexa: Sweetlink sa passare a Home Assistant i comandi che arrivano da Alexa
+  attraverso Sweetplace, e rimandare la risposta. È in prova e non è ancora disponibile nell'app Alexa: niente
+  cambia finché la skill di Sweetplace non viene pubblicata.
+- I dispositivi scelti per Alexa vengono presentati in italiano. Il cambio si applica al prossimo riavvio di
+  Home Assistant.
+- Se i dispositivi scelti per Alexa sono più di 300, il massimo che Amazon accetta, Sweetlink ne presenta i primi
+  300 e lo scrive nel suo registro.
+
 ## 0.1.62
 
 - Dopo il passaggio dello Z-Wave alla copia di Sweetplace, la copia riparte da sola a ogni riavvio dell'impianto,
