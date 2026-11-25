@@ -3,6 +3,12 @@
 Questo è il testo che Home Assistant mostra quando propone un aggiornamento. Una voce per versione,
 la più recente in cima, scritta per chi ha l'impianto in casa e non per chi lo sviluppa.
 
+## 0.1.64
+
+- L'assistenza di Sweetplace può aggiornare le integrazioni che hai installato con HACS alla versione provata da
+  Sweetplace, tenendo una copia di quella di prima. Home Assistant si riavvia una volta sola, alla fine, se almeno una
+  integrazione è cambiata o potrebbe esserlo.
+
 ## 0.1.63
 
 - Prima parte del collegamento con Alexa: Sweetlink sa passare a Home Assistant i comandi che arrivano da Alexa
