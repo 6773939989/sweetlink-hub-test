@@ -3,6 +3,12 @@
 Questo è il testo che Home Assistant mostra quando propone un aggiornamento. Una voce per versione,
 la più recente in cima, scritta per chi ha l'impianto in casa e non per chi lo sviluppa.
 
+## 0.1.65
+
+- Con Alexa collegato, l'app Alexa vede subito quando un dispositivo cambia stato, anche se lo accendi
+  dall'interruttore o con Google. I dispositivi che aggiungi o togli ai comandi vocali compaiono o spariscono
+  in Alexa da soli, senza dover chiedere «Alexa, cerca dispositivi».
+
 ## 0.1.64
 
 - L'assistenza di Sweetplace può aggiornare le integrazioni che hai installato con HACS alla versione provata da
