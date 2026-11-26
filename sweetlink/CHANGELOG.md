@@ -3,6 +3,14 @@
 Questo è il testo che Home Assistant mostra quando propone un aggiornamento. Una voce per versione,
 la più recente in cima, scritta per chi ha l'impianto in casa e non per chi lo sviluppa.
 
+## 0.1.66
+
+- I comandi vocali con Alexa usano ora l'elenco dei dispositivi preparato dal sistema Sweetplace, lo
+  stesso di Google.
+- Sweetlink controlla da solo che Home Assistant sappia dove trovare i dispositivi per Alexa e Google, e se
+  qualcosa manca lo sistema e riavvia Home Assistant una volta. Così un file mancante non impedisce più a
+  Home Assistant di ripartire.
+
 ## 0.1.65
 
 - Con Alexa collegato, l'app Alexa vede subito quando un dispositivo cambia stato, anche se lo accendi
