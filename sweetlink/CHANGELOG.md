@@ -3,6 +3,11 @@
 Questo è il testo che Home Assistant mostra quando propone un aggiornamento. Una voce per versione,
 la più recente in cima, scritta per chi ha l'impianto in casa e non per chi lo sviluppa.
 
+## 0.1.67
+
+- Il registro di Sweetlink dice anche per Alexa, come già per Google, quando manca l'elenco dei
+  dispositivi per i comandi vocali, e quando torna.
+
 ## 0.1.66
 
 - I comandi vocali con Alexa usano ora l'elenco dei dispositivi preparato dal sistema Sweetplace, lo
